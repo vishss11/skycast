@@ -1,0 +1,38 @@
+.scene-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeUp 0.5s 0.2s both;
+}
+.scene-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+.scene-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--border-color);
+}
+.scene-title {
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.2px;
+  color: var(--text-muted);
+}
+.scene-badge {
+  font-size: 0.74rem; font-weight: 600;
+  color: var(--accent); background: var(--accent-pale);
+  padding: 3px 10px; border-radius: 20px;
+}
+
+.scene-svg-wrap { line-height: 0; width: 100%; }
+.scene-svg { width: 100%; height: auto; display: block; }
+
+.scene-footer {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 18px 13px;
+  border-top: 1px solid var(--border-color);
+  background: var(--card-bg2);
+}
+.scene-tip-icon { font-size: 1.1rem; flex-shrink: 0; }
+.scene-tip-text { font-size: 0.82rem; font-weight: 500; color: var(--text-secondary); }

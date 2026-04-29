@@ -1,0 +1,117 @@
+.main-weather-card {
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeUp 0.5s ease both;
+}
+
+.main-weather-card::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+
+.loading-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+.mw-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mw-city {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.mw-date {
+  font-size: 0.8rem;
+  color: var(--text2);
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.fav-btn {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text);
+}
+
+.fav-btn:hover { background: rgba(255,255,255,0.3); transform: scale(1.1); }
+.fav-btn.faved { background: rgba(245,158,11,0.2); border-color: var(--accent3); }
+
+.mw-center {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.mw-emoji {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 4px;
+  animation: float 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+.mw-temp {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+}
+
+.mw-desc {
+  font-size: 1rem;
+  color: var(--text2);
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.mw-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mw-range {
+  display: flex;
+  gap: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text2);
+}
+
+.mw-feels {
+  font-size: 0.8rem;
+  color: var(--text2);
+}

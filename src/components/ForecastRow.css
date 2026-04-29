@@ -1,0 +1,29 @@
+.forecast-card { animation: fadeUp 0.5s 0.3s ease both; }
+
+.forecast-list { display: flex; flex-direction: column; gap: 6px; }
+
+.forecast-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--card-bg2);
+  border: 1px solid var(--card-border);
+  transition: all 0.2s ease;
+  animation: fadeUp 0.3s ease both;
+}
+
+.forecast-row:hover {
+  background: rgba(99,102,241,0.08);
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.fc-day { font-weight: 700; font-size: 0.85rem; color: var(--text); min-width: 36px; }
+.fc-emoji { font-size: 1.2rem; }
+.fc-desc { flex: 1; font-size: 0.8rem; color: var(--text2); text-transform: capitalize; }
+.fc-range { font-size: 0.85rem; font-weight: 600; white-space: nowrap; }
+.fc-max { color: var(--accent3); }
+.fc-sep { color: var(--muted); }
+.fc-min { color: var(--accent); }

@@ -1,0 +1,98 @@
+.info-panel-card {
+  animation: fadeUp 0.5s 0.15s ease both;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.insight-block {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.insight-block:last-child { border-bottom: none; padding-bottom: 0; }
+.insight-block:first-of-type { padding-top: 0; }
+
+.insight-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.insight-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+.insight-content { flex: 1; }
+
+.insight-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.insight-value {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.comfort-bar-bg {
+  height: 6px;
+  background: var(--card-bg2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.comfort-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.8s ease;
+}
+
+.uv-badge {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 800;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tips */
+.tip-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--card-bg2);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 12px !important;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--card-border) !important;
+}
+
+.tip-block:last-child { margin-bottom: 0; }
+
+.tip-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+
+.tip-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 3px;
+}
+
+.tip-text {
+  font-size: 0.82rem;
+  color: var(--text2);
+  line-height: 1.4;
+  font-weight: 500;
+}

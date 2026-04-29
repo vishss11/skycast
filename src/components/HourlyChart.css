@@ -1,0 +1,58 @@
+.hourly-card { animation: fadeUp 0.5s 0.2s ease both; }
+
+.hourly-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.hourly-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 58px;
+  animation: fadeUp 0.3s ease both;
+  cursor: default;
+}
+
+.hourly-item:hover .h-bar {
+  background: var(--accent2);
+  transform: scaleX(1.1);
+}
+
+.h-time { font-size: 0.65rem; color: var(--muted); font-weight: 600; white-space: nowrap; }
+.h-emoji { font-size: 1.1rem; }
+
+.h-bar-wrapper {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.h-bar {
+  width: 28px;
+  background: var(--grad-blue);
+  border-radius: 6px 6px 4px 4px;
+  transition: all 0.2s ease;
+  min-height: 12px;
+}
+
+.h-temp { font-size: 0.8rem; font-weight: 700; color: var(--text); font-family: var(--font-display); }
+.h-pop { font-size: 0.6rem; color: var(--accent); font-weight: 600; }
+
+.hourly-skeleton-row {
+  display: flex;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.hourly-skel-item {
+  min-width: 58px;
+  height: 120px;
+  border-radius: 10px;
+}

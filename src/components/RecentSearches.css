@@ -1,0 +1,4 @@
+.recent-row { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.recent-label { font-size: 0.75rem; color: var(--muted); font-weight: 600; }
+.recent-chip { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 20px; padding: 4px 12px; font-size: 0.8rem; color: var(--text2); cursor: pointer; transition: all 0.2s; }
+.recent-chip:hover { background: var(--accent); color: white; border-color: var(--accent); }

@@ -1,0 +1,37 @@
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.es-emoji { font-size: 5rem; margin-bottom: 16px; animation: float 4s ease-in-out infinite; display: inline-block; }
+.es-title { font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.es-sub { color: var(--text2); font-size: 1rem; margin-bottom: 24px; }
+
+.es-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.es-chip {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 24px;
+  padding: 8px 18px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.es-chip:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}

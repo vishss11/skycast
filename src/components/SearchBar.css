@@ -1,0 +1,130 @@
+.search-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-input-group {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 14px;
+  padding: 4px 4px 4px 14px;
+  gap: 8px;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.search-input-group:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+
+.search-icon { font-size: 1rem; color: var(--muted); }
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.search-input::placeholder { color: var(--muted); }
+
+.search-btn {
+  background: var(--grad-blue);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.search-btn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.search-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.search-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loc-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: var(--text2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+  white-space: nowrap;
+}
+
+.loc-btn:hover:not(:disabled) {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.loc-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.unit-toggle {
+  display: flex;
+  background: var(--card-bg2);
+  border: 1.5px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.unit-btn {
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  color: var(--text2);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.unit-btn.active {
+  background: var(--grad-blue);
+  color: white;
+}
+
+/* Spinner */
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.spinner.sm {
+  width: 12px;
+  height: 12px;
+  border-color: rgba(99,102,241,0.3);
+  border-top-color: var(--accent);
+}

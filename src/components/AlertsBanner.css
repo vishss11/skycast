@@ -1,0 +1,18 @@
+.alerts-wrapper { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; animation: fadeIn 0.4s ease; }
+
+.alert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.alert-danger { background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.3); color: var(--danger); }
+.alert-warn   { background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.3); color: var(--warn); }
+.alert-info   { background: rgba(99,102,241,0.1);  border: 1px solid rgba(99,102,241,0.25); color: var(--accent); }
+
+.alert-close { background: none; border: none; color: inherit; opacity: 0.6; font-size: 0.75rem; cursor: pointer; padding: 2px 6px; }
+.alert-close:hover { opacity: 1; }
