@@ -5,8 +5,7 @@ const WeatherMap = ({ weather, loading, theme }) => {
   const mapUrl = useMemo(() => {
     if (!weather?.lat || !weather?.lon) return null;
     const { lat, lon } = weather;
-    const bbox = `${lon-0.18},${lat-0.12},${lon+0.18},${lat+0.12}`;
-    return `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat},${lon}`;
+    return `https://maps.google.com/maps?q=${lat},${lon}&z=12&output=embed`;
   }, [weather?.lat, weather?.lon]);
 
   return (
@@ -40,11 +39,11 @@ const WeatherMap = ({ weather, loading, theme }) => {
               src={mapUrl}
               className={`map-iframe ${theme === 'dark' ? 'dark-map' : ''}`}
               loading="lazy"
-              referrerPolicy="no-referrer"
+              allowFullScreen
             />
-            <a
+            
               className="map-open-link"
-              href={`https://www.openstreetmap.org/?mlat=${weather.lat}&mlon=${weather.lon}#map=12/${weather.lat}/${weather.lon}`}
+              href={`https://www.google.com/maps?q=${weather.lat},${weather.lon}`}
               target="_blank"
               rel="noreferrer"
             >

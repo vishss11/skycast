@@ -180,7 +180,8 @@ const useWeather = () => {
       setError(err.message.includes('city not found') || err.message.includes('404')
         ? 'City not found. Please check the spelling.' : err.message);
     } finally {
-      setLoading(false);
+      setLoading(true);
+      setAlerts([]);
     }
   }, []);
 
