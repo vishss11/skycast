@@ -48,13 +48,15 @@ const StatsGrid = ({ weather, loading, unit }) => {
         gradient="var(--grad-green)"
       />
       <StatBox
-        icon="🌅" label="Sunrise" value={formatTime(weather.sunrise)}
-        gradient="var(--grad-orange)"
-      />
-      <StatBox
-        icon="🌇" label="Sunset" value={formatTime(weather.sunset)}
-        gradient="var(--grad-pink)"
-      />
+  icon="🌅" label="Sunrise"
+  value={formatTime(weather.sunrise, weather.timezone)}
+  gradient="var(--grad-orange)"
+/>
+<StatBox
+  icon="🌇" label="Sunset"
+  value={formatTime(weather.sunset, weather.timezone)}
+  gradient="var(--grad-pink)"
+/>
     </div>
   );
 };

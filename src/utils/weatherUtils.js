@@ -6,9 +6,9 @@ export const formatTemp = (kelvin, unit) =>
     ? `${Math.round(kelvinToCelsius(kelvin))}°C`
     : `${Math.round(kelvinToFahrenheit(kelvin))}°F`;
 
-export const formatTime = (unix) => {
-  const d = new Date(unix * 1000);
-  return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+export const formatTime = (unix, timezoneOffset = 0) => {
+  const d = new Date((unix + timezoneOffset) * 1000);
+  return d.toUTCString().slice(17, 22);
 };
 
 export const formatDay = (unix) =>

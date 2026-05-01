@@ -98,6 +98,7 @@ const normalise = (data) => ({
   description: data.weather[0].description,
   sunrise: data.sys.sunrise,
   sunset: data.sys.sunset,
+  timezone: data.timezone,
   clouds: data.clouds?.all ?? 0,
   lat:    data.coord?.lat,   // ← ADD
   lon:    data.coord?.lon,   // ← ADD
