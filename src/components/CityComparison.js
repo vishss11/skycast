@@ -4,11 +4,15 @@ import './CityComparison.css';
 
 const CityComparison = ({ comparisons, unit }) => {
   if (comparisons.length === 0) return (
-    <div className="compare-loading">
-      <div className="spinner-lg" />
-      <p>Loading city data...</p>
+  <div className="compare-page">
+    <h2 className="page-title">🌍 Global City Comparison</h2>
+    <div className="compare-grid">
+      {[...Array(12)].map((_, i) => (
+        <div key={i} className="skeleton" style={{ height: 180, borderRadius: 'var(--radius)' }} />
+      ))}
     </div>
-  );
+  </div>
+);
 
   const sorted = [...comparisons].sort((a, b) => b.temp - a.temp);
 

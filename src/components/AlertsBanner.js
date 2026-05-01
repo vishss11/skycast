@@ -3,15 +3,21 @@ import './AlertsBanner.css';
 
 const AlertsBanner = ({ alerts }) => {
   const [dismissed, setDismissed] = useState([]);
-  const visible = alerts.filter((_, i) => !dismissed.includes(i));
+
+  const visible = alerts.filter(a => !dismissed.includes(a.msg));
   if (visible.length === 0) return null;
 
   return (
     <div className="alerts-wrapper">
-      {visible.map((alert, i) => (
-        <div key={i} className={`alert-item alert-${alert.type}`}>
+      {visible.map((alert) => (
+        <div key={alert.msg} className={`alert-item alert-${alert.type}`}>
           <span className="alert-msg">{alert.msg}</span>
-          <button className="alert-close" onClick={() => setDismissed(d => [...d, alerts.indexOf(alert)])}>✕</button>
+          <button
+            className="alert-close"
+            onClick={() => setDismissed(d => [...d, alert.msg])}
+          >
+            ✕
+          </button>
         </div>
       ))}
     </div>

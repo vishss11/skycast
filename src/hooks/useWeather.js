@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 
-const API_KEY  = 'a585df6a154c5d9f7768ea48d6d84d1f'; // paste your key from openweathermap.org
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY; // paste your key from openweathermap.org
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 const get = async (url) => {
@@ -180,8 +180,8 @@ const useWeather = () => {
       setError(err.message.includes('city not found') || err.message.includes('404')
         ? 'City not found. Please check the spelling.' : err.message);
     } finally {
-      setLoading(true);
-      setAlerts([]);
+      setLoading(false);
+      
     }
   }, []);
 
